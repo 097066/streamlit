@@ -26,7 +26,7 @@ if uploaded_file:
     st.write('原始圖片的圖像大小：', image.size)
 
     # 裁剪圖像
-    crop_image = image.crop((50, 50, 200, 200))
+    crop_image = image.crop((50, 50, image.size[0]-50, image.size[1]-50))
     # 展示裁剪后的圖像
     st.title("裁剪圖像")
     st.image(crop_image)
